@@ -1,0 +1,11 @@
+version: '3'
+services:
+  php-mssql:
+    build: .
+    environment:
+      - mailhub:=mail.moo.umd.edu
+      - smtp_hostname:=mail.moo.umd.edu
+    ports:
+      - "80:80"
+    volumes:
+      - /srv/websites:/var/www/html
