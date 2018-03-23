@@ -1,7 +1,7 @@
 FROM php:7.1-apache
 # Install sqlsrv pre-pre-requisites
 RUN apt-get update \
-    && apt-get install curl apt-transport-https \
+    && apt-get install -y -q curl apt-transport-https \
     && apt-get clean \
     && rm -r /var/lib/apt/lists/*
 
